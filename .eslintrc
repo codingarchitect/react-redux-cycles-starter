@@ -1,0 +1,38 @@
+{
+  "extends": [ 
+    "airbnb",
+    "cleanjs"
+  ],
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "linebreak-style": ["error", "windows"],
+    "max-depth": ["error", 8],         // specify the maximum depth that blocks can be nested (off by default)
+    "max-params": ["error", 5],        // limits the number of parameters that can be used in the function declaration. (off by default)
+    "max-statements": ["error", { 
+      "max": 30 
+    }],   // specify the maximum number of statement allowed in a function (off by default)
+    "max-lines": ["error", {
+      "max": 100, 
+      "skipBlankLines": true, 
+      "skipComments": true
+    }],                               // specify the maximum number of statement allowed in a function (off by default)
+    "complexity": ["error", { 
+      "max": 6 
+    }],
+    "max-nested-callbacks": ["error", { 
+      "max": 2 
+    }],
+    "no-inner-declarations": "error",
+    "fp/no-mutation": ["error", {"exceptions": [{"property": "propTypes" }, {"property": "defaultProps" }]}]
+  },
+  "settings": {
+    "import/resolver": "webpack"
+  }
+}
